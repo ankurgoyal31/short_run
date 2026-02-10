@@ -34,7 +34,7 @@ if(u.length==0){
   return;
 }
  sl("")
-  const urls = u.map((item) => `http://localhost:3000/${item.short}`);
+  const urls = u.map((item) => `https://short-run-virid.vercel.app/${item.short}`);
   a(urls);  
  };
   const hand = (e)=>{
