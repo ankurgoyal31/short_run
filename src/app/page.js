@@ -9,8 +9,11 @@ import { mong } from "./[slug]/page";
  // import Lottie from 'lottie-react';
  // import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import dynamic from "next/dynamic";
+ 
 
-const Back = dynamic(() => import("./com/back"), { ssr: false });
+const Player = dynamic(() =>  import("@lottiefiles/react-lottie-player").then( (mod) => mod.Player),{ ssr: false });
+
+// const Back = dynamic(() => import("./com/back"), { ssr: false });
 
  import { bt } from "./[slug]/page";
 export default function Home() {
