@@ -3,17 +3,17 @@ import Image from "next/image";
 import React from "react";
 import './globals.css'
 import { mong } from "./[slug]/page";
-// import Back from "./com/back";
+ 
  import { useState,useEffect } from "react";
  import Link from "next/link";
- // import Lottie from 'lottie-react';
- // import { Player, Controls } from '@lottiefiles/react-lottie-player';
+ 
+ 
 import dynamic from "next/dynamic";
  
 
 const Player = dynamic(() =>  import("@lottiefiles/react-lottie-player").then( (mod) => mod.Player),{ ssr: false });
 
-// const Back = dynamic(() => import("./com/back"), { ssr: false });
+ 
 
  import { bt } from "./[slug]/page";
 export default function Home() {
@@ -33,8 +33,7 @@ if(u.length==0){
   sl("Not Found");
   return;
 }
-// console.log(u)
-  // sl("")
+ sl("")
   const urls = u.map((item) => `http://localhost:3000/${item.short}`);
   a(urls);  
  };
@@ -61,7 +60,7 @@ localStorage.setItem("items", JSON.stringify([...old, first]));
    return (
      <>
   <div className="container">
-  // <Back />
+   
 
   <div className="card">
     <div className="logo">
