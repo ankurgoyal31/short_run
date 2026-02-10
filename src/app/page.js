@@ -50,7 +50,7 @@ localStorage.setItem("items", JSON.stringify([...old, first]));
   const y = await mong(first.url,first.short);
    console.log(y);
    alert("sucessfullly short your url")
-   k(`http://localhost:3000/${first.short}`,true)
+   k(`https://short-run-virid.vercel.app/${first.short}`,true)
    setfirst({url:"",short:""})
    gt(1);
   }
