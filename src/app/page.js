@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import './globals.css'
 import { mong } from "./[slug]/page";
-import Back from "./com/back";
+// import Back from "./com/back";
  import { useState,useEffect } from "react";
  import Link from "next/link";
  // import Lottie from 'lottie-react';
@@ -58,7 +58,7 @@ localStorage.setItem("items", JSON.stringify([...old, first]));
    return (
      <>
   <div className="container">
-  <Back />
+  // <Back />
 
   <div className="card">
     <div className="logo">
