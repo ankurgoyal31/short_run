@@ -6,8 +6,12 @@ import { mong } from "./[slug]/page";
 import Back from "./com/back";
  import { useState,useEffect } from "react";
  import Link from "next/link";
- import Lottie from 'lottie-react';
- import { Player, Controls } from '@lottiefiles/react-lottie-player';
+ // import Lottie from 'lottie-react';
+ // import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import dynamic from "next/dynamic";
+
+const Back = dynamic(() => import("./com/back"), { ssr: false });
+
  import { bt } from "./[slug]/page";
 export default function Home() {
   const [first, setfirst] = useState({url:"",short:""})
