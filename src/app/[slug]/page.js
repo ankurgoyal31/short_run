@@ -1,7 +1,6 @@
 "use server";
 
 import { MongoClient } from "mongodb";
-import { redirect } from "next/navigation";
 import { configDotenv } from "dotenv";
 
 configDotenv();
@@ -42,21 +41,3 @@ async function mongodb() {
 
   await Um.insertOne({ url, short: d, s: 1 });
 };
-
- export default async function Page({ params }) {
-  const { slug } = params;
-  const Um = await mongodb();
-  const data = await Um.findOne({ short: slug });
-
-  console.log(data);
-
-  if (data) {
-    redirect(data.url);
-  }
-
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>❌ Short URL not found!</h1>
-    </div>
-  );
-}
