@@ -29,14 +29,14 @@ async function mongodb() {
     url = "https://" + url;
   }
 
-  const data = await Um.findOne({ url });
+  // const data = await Um.findOne({ url });
 
-  if (data) {
-    await Um.updateOne(
-      { url },
-      { $set: { short: d } });
-    return;
-  }
+  // if (data) {
+  //   await Um.updateOne(
+  //     { url },
+  //     { $set: { short: d } });
+  //   return;
+  // }
 
   await Um.insertOne({ url, short: d, s: 1 });
 };
