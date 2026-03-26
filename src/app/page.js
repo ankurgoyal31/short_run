@@ -90,7 +90,7 @@ localStorage.setItem("items", JSON.stringify([...old, first]));
     <div className="list">
       {s.map((item, i) => (
         <div className="urlCard" key={i}>
-          <p>{item}</p>
+            <p>{item}</p>
           <Link href={item}>
             <button className="openBtn">Open</button>
           </Link>
