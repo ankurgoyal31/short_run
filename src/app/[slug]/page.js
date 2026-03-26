@@ -28,23 +28,14 @@ async function mongodb() {
   if (!url.startsWith("http")) {
     url = "https://" + url;
   }
-
-  // const data = await Um.findOne({ url });
-
-  // if (data) {
-  //   await Um.updateOne(
-  //     { url },
-  //     { $set: { short: d } });
-  //   return;
-  // }
-
   await Um.insertOne({ url, short: d, s: 1 });
 };
 
  export default async function Page({ params }) {
   const { slug } =  await params;
   const Um = await mongodb();
-  const data = await Um.findOne({ short: slug });
+  let cleanInput = slug.replace(/\s/g, "");
+  const data = await Um.findOne({ short: cleanInput });
 
   console.log(data);
 
